@@ -4,6 +4,8 @@ Logger is a [Kirby CMS](https://getkirby.com) plugin that logs all changes to th
 
 If you don't want to or cannot use Git to track changes to the content folder but want keep an eye on who changed what and when, this plugin might be for you.
 
+![](logger.png)
+
 ## Installation
 
 ### Download
@@ -80,6 +82,7 @@ This plugin is inspired by and heavily reuses code of these two great Kirby plug
 
 - [Auto Git](https://github.com/pedroborges/kirby-autogit) plugin by @pedroborges
 - [Static Translations](https://github.com/rasteiner/kirbytranslations) plugin by @rastainer
+
 ## License
 
 Logger is open-sourced software licensed under the MIT license.
