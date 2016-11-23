@@ -14,9 +14,10 @@ if(class_exists('Panel')) {
 		}
 		public function getChanges() {
 			$filepath = panel()->site()->kirby()->roots()->index() . DS . "logger/log.txt";
-			$changes = tail($filepath, c::get('logger.entries', 50));
+			$entries = c::get('logger.entries', 50);
+			$changes = tail($filepath, $entries);
 
-			return compact('changes');
+			return compact('changes', 'entries');
 		}
 
 		public function index() {

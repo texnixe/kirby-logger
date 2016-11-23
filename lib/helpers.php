@@ -60,7 +60,7 @@ function translation($string) {
   if (! array_key_exists($language, $translations)) {
     $language = 'en';
   }
-  
+
   $translation = $translations[$language];
 
   if(array_key_exists($string, $translation)) {
