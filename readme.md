@@ -6,6 +6,12 @@ If you don't want to or cannot use Git to track changes to the content folder bu
 
 ![](logger.png)
 
+### Panel widget
+
+- link to Logger view
+- shows size of log file
+- reset button to empty log file
+
 ## Installation
 
 ### Download

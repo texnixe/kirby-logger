@@ -6,6 +6,7 @@
   border-radius: 4px;
 }
 </style>
+<div class="logger-widget">
 <ul class="nav nav-list sidebar-list">
   <li>
     <a class="">
@@ -20,3 +21,17 @@
     </a>
   </li>
 </ul>
+</div>
+<script>
+  $('.reset').click(function(e) {
+    e.preventDefault();
+    console.log('click');
+    var url = "<?=u("logger/api/delete")?>";
+    console.log(url);
+    $.get(url, function(data) {
+      console.log(data);
+    // some more code
+
+    });
+  })
+</script>
