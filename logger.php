@@ -3,7 +3,7 @@
 /**
  * Kirby Logger Plugin
  *
- * @version   1.0.0
+ * @version   1.1.0
  * @author    Sonja Broda <info@texniq.de>
  * @copyright Pedro Borges <info@texniq.de>
  * @link      https://github.com/texnixe/kirby-logger
