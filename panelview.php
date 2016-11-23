@@ -6,6 +6,8 @@ use \l;
 use \r;
 use \f;
 use \c;
+require_once(__DIR__.DS.'lib'.DS.'logger.php');
+require_once(__DIR__.DS.'lib'.DS.'helpers.php');
 
 if(class_exists('Panel')) {
 	class LoggerController extends \Kirby\Panel\Controllers\Base {
@@ -13,7 +15,7 @@ if(class_exists('Panel')) {
 			return new LoggerView($file, $data);
 		}
 		public function getChanges() {
-			$filepath = panel()->site()->kirby()->roots()->index() . DS . "logger/log.txt";
+			$filepath = c::get('logger.filepath', panel()->site()->kirby()->roots()->index() . DS . "logger/log.txt");
 			$entries = c::get('logger.entries', 50);
 			$changes = tail($filepath, $entries);
 

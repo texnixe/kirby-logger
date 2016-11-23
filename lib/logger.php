@@ -28,6 +28,10 @@ class Logger {
     return site()->user()? site()->user()->username():'anonymous';
   }
 
+  public function getLogfile() {
+    return $this->logfile;
+  }
+
   public function save(...$params) {
     $message = $this->getMessage($params[0], array_slice($params, 1));
     $diff = array();
