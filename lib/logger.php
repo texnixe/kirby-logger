@@ -56,7 +56,7 @@ class Logger {
     $translation = c::get('logger.translation', false);
     if (! $translation) {
       $translations = require __DIR__.DS.'translations.php';
-      $language = kirby()->option('panel.language', 'en');
+      $language = c::get('logger.language', c::get('panel.language', 'en');
       if (! array_key_exists($language, $translations)) {
         $language = 'en';
       }

@@ -55,7 +55,7 @@ function tail($filename, $lines = 10, $buffer = 4096)
 function translation($string) {
 
   $translations = require __DIR__ . DS . 'translations.php';
-  $language = kirby()->option('panel.language', 'en');
+  $language = c::get('logger.language', c::get('panel.language', 'en');
 
   if (! array_key_exists($language, $translations)) {
     $language = 'en';
