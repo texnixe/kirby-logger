@@ -5,6 +5,7 @@ use C;
 use Exception;
 use F;
 
+require_once(__DIR__ . DS . 'helpers.php');
 
 class Logger {
 
@@ -52,17 +53,7 @@ class Logger {
   }
 
   protected function getMessage($key, $params) {
-
-    $translation = c::get('logger.translation', false);
-    if (! $translation) {
-      $translations = require __DIR__.DS.'translations.php';
-      $language = c::get('logger.language', c::get('panel.language', 'en');
-      if (! array_key_exists($language, $translations)) {
-        $language = 'en';
-      }
-      $translation = $translations[$language];
-    }
-    array_unshift($params, $translation[$key]);
+    array_unshift($params, translation($key));
     return sprintf(...$params);
   }
 
