@@ -58,7 +58,7 @@ function translation($string) {
 
   if(!translation) {
     $translations = require __DIR__ . DS . 'translations.php';
-    $language = c::get('logger.language', c::get('panel.language', 'en'));
+    $language = c::get('logger.language', c::get('panel.language'));
 
     if (! array_key_exists($language, $translations)) {
       $language = 'en';
@@ -69,7 +69,6 @@ function translation($string) {
 
   if(array_key_exists($string, $translation)) {
     $string = $translation[$string];
-
   }
 
   return $string;
