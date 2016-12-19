@@ -73,3 +73,11 @@ function translation($string) {
 
   return $string;
 }
+
+function createLogfile($path) {
+  try {
+    $file = f::write($path, '');
+  } catch(Exception $e) {
+    throw new Exception('The file could not be created');
+  }
+}

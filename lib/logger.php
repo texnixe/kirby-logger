@@ -17,11 +17,7 @@ class Logger {
     $this->user = $this->getUser();
 
     if(! file_exists($this->logfile)) {
-      try {
-        f::write($this->logfile, '');
-      } catch(Exception $e) {
-        throw new Exception('The file does not exist');
-      }
+      createLogfile($this->logfile);
     }
   }
 

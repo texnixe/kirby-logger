@@ -7,6 +7,8 @@ use \r;
 use \f;
 use \c;
 
+require_once(__DIR__ . DS . 'lib' . DS . 'helpers.php');
+
 if(class_exists('Panel')) {
 	class LoggerController extends \Kirby\Panel\Controllers\Base {
 		public function view($file, $data = array()) {
@@ -14,6 +16,9 @@ if(class_exists('Panel')) {
 		}
 		public function getChanges() {
 			$filepath = panel()->site()->kirby()->roots()->index() . DS . "logger/log.txt";
+			if(! file_exists($filepath)) {
+	      createLogfile($filepath);
+	    }
 			$entries = c::get('logger.entries', 50);
 			$changes = tail($filepath, $entries);
 
