@@ -56,7 +56,7 @@ function translation($string) {
 
   $translation = c::get('logger.translation', false);
 
-  if(!translation) {
+  if(!$translation) {
     $translations = require __DIR__ . DS . 'translations.php';
     $language = c::get('logger.language', c::get('panel.language'));
 
