@@ -54,18 +54,21 @@ function tail($filename, $lines = 10, $buffer = 4096)
 
 function translation($string) {
 
-  $translations = require __DIR__ . DS . 'translations.php';
-  $language = kirby()->option('panel.language', 'en');
+  $translation = c::get('logger.translation', false);
 
-  if (! array_key_exists($language, $translations)) {
-    $language = 'en';
+  if(!$translation) {
+    $translations = require __DIR__ . DS . 'translations.php';
+    $language = c::get('logger.language', c::get('panel.language'));
+
+    if (! array_key_exists($language, $translations)) {
+      $language = 'en';
+    }
+
+    $translation = $translations[$language];
   }
-
-  $translation = $translations[$language];
 
   if(array_key_exists($string, $translation)) {
     $string = $translation[$string];
-
   }
 
   return $string;
