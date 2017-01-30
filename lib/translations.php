@@ -6,7 +6,7 @@ return [
         'page.update'  => 'Updated page %s',
         'page.delete'  => 'Deleted page %s',
         'page.sort'    => 'Sorted page %s',
-        'page.hide'    => 'Hide page %s',
+        'page.hide'    => 'Hid page %s',
         'page.move'    => 'Moved page %1$s to %2$s',
         'file.upload'  => 'Uploaded file %s',
         'file.replace' => 'Replaced file %2$s through file %1$s',
