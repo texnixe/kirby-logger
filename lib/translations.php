@@ -40,7 +40,26 @@ return [
         'action'       => 'Aktion',
         'changes'       => 'Geänderte Felder'
     ],
-
+    'nl' => [
+        'site.update'  => 'Site-opties veranderd',
+        'page.create'  => 'Pagina %s aangemaakt',
+        'page.update'  => 'Pagina %s veranderd',
+        'page.delete'  => 'Pagina %s verwijderd',
+        'page.sort'    => 'Pagina %s gesorteerd',
+        'page.hide'    => 'Pagina %s verborgen',
+        'page.move'    => 'Pagina %1$s naar %2$s verplaatst',
+        'file.upload'  => 'Bestand %s geüpload',
+        'file.replace' => 'Bestand %2$s voor bestand %1$s vervangen',
+        'file.rename'  => 'Bestand %s hernoemd',
+        'file.update'  => 'Bestand %s veranderd',
+        'file.sort'    => 'Bestand %s gesorteerd',
+        'file.delete'  => 'Bestand %s verwijderd',
+        'user'         => 'Gebruiker',
+        'date'         => 'Datum',
+        'time'         => 'Tijd',
+        'action'       => 'Actie',
+        'changes'      => 'Veranderde velden',
+    ],
     'fr' => [
         'site.update'  => 'Paramètres du site modifiés',
         'page.create'  => 'Page %s créée',
