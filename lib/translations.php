@@ -18,7 +18,7 @@ return [
         'date'         => 'Date',
         'time'         => 'Time',
         'action'       => 'Action',
-        'changes'       => 'Changed fields'
+        'changes'      => 'Changed fields',
     ],
     'de' => [
         'site.update'  => 'Seiteneinstellungen aktualisiert',
@@ -38,7 +38,7 @@ return [
         'date'         => 'Datum',
         'time'         => 'Zeit',
         'action'       => 'Aktion',
-        'changes'       => 'Geänderte Felder'
+        'changes'      => 'Geänderte Felder',
     ],
     'nl' => [
         'site.update'  => 'Site-opties veranderd',
@@ -78,7 +78,7 @@ return [
         'date'         => 'Date',
         'time'         => 'Temps',
         'action'       => 'Action',
-        'changes'       => 'Champs modifiés'
+        'changes'      => 'Champs modifiés',
     ],
     'pt_BR' => [
         'site.update'  => 'Alterou as opções do site',
@@ -98,7 +98,7 @@ return [
         'date'         => 'Data',
         'time'         => 'Tempo',
         'action'       => 'Ação',
-        'changes'       => 'Campos alterados'
+        'changes'      => 'Campos alterados',
     ],
     'pt_PT' => [
         'site.update'  => 'Alterou as opções do site',
@@ -118,6 +118,6 @@ return [
         'date'         => 'Data',
         'time'         => 'Tempo',
         'action'       => 'Ação',
-        'changes'       => 'Campos alterados'
+        'changes'      => 'Campos alterados',
     ],
 ];
