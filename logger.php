@@ -22,6 +22,6 @@ require_once(__DIR__ . DS . 'panelview.php');
 require_once(__DIR__ . DS . 'lib' . DS . 'helpers.php');
 
 // Load widgets
-if(site()->user() && site()->user()->role() == 'admin') {
+if(site()->user() && in_array(site()->user()->role(), c::get('logger.roles', ['admin']))) {
   kirby()->set('widget', 'logger', __DIR__. DS . 'widgets' . DS . 'logger');
 }

@@ -41,6 +41,7 @@ Run these commands to update the plugin:
 The following options can be set in your `/site/config/config.php`:
 
 ```php
+c::set('logger.roles', ['admin']);
 c::set('logger.entries', 50);
 c::set('logger.language', 'en');
 c::set('logger.translation', [
@@ -63,6 +64,9 @@ c::set('logger.translation', [
   'action'       => 'Action'
 ]);    
 ```
+### logger.roles
+
+An array of roles that are allowed to view the log (and the Panel widget)
 
 ### logger.entries
 

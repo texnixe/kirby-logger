@@ -4,7 +4,7 @@
 <?= js('//cdn.datatables.net/1.10.12/js/jquery.dataTables.js') ?>
 <?= js('//cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.js') ?>
 
-<?php if(site()->user()->role() == 'admin'): ?>
+<?php if(in_array(site()->user()->role(), c::get('logger.roles', ['admin']))): ?>
   <div class="bars cf">
     <div class="">
       <div class="section">
