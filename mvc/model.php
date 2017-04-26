@@ -1,11 +1,11 @@
 <?php
-namespace Logger;
+namespace Kirby\Panel\Models;
 
 use C;
 use Exception;
 use F;
 
-require_once(__DIR__ . DS . 'helpers.php');
+require_once(__DIR__ . DS . '../lib' . DS . 'helpers.php');
 
 class Logger {
 
@@ -67,4 +67,18 @@ class Logger {
     return $diff;
   }
 
+  public function getChanges() {
+    $filepath = c::get('logger.filepath', kirby()->roots()->index() . DS . 'logger/log.txt');
+    if(! file_exists($filepath)) {
+      createLogfile($filepath);
+    }
+    $entries = c::get('logger.entries', 50);
+    $changes = tail($filepath, $entries);
+
+    return $changes;
+  }
+
+  public function topbar($topbar) {
+    $topbar->append(purl('logger'), 'Logger');
+  }
 }

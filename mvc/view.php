@@ -1,6 +1,5 @@
 <?= css('//cdn.datatables.net/1.10.12/css/jquery.dataTables.css') ?>
 <?= css('//cdn.datatables.net/responsive/2.1.0/css/responsive.dataTables.css') ?>
-
 <?= js('//cdn.datatables.net/1.10.12/js/jquery.dataTables.js') ?>
 <?= js('//cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.js') ?>
 
@@ -22,7 +21,7 @@
             <?php if(!empty($changes)):
               foreach($changes as $value): ?>
                 <?php if(empty($value)) continue; ?>
-                <?php $result = explode(',', $value); ?>
+                <?php $result = explode(',', $value);?>
                 <tr>
                   <td><?= isset($result[0])? trim($result[0]):'' ?></td>
                   <td><?= isset($result[1])? trim($result[1]):'' ?></td>
@@ -49,7 +48,7 @@
 			e.preventDefault();
 		});
 	}).DataTable({
-    "iDisplayLength": <?= $entries ?>,
+    "iDisplayLength": <?= c::get('logger.entries', 50); ?>,
 		responsive: true,
 		autoWidth: false,
     "bLengthChange": false,
@@ -57,5 +56,4 @@
     { "width": "40%", "targets": [3] }
     ]
 	});
-
 </script>
