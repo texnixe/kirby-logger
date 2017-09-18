@@ -76,7 +76,7 @@ return [
         'file.delete'  => 'Fichier %s supprimé',
         'user'         => 'Utilisateur',
         'date'         => 'Date',
-        'time'         => 'Temps',
+        'time'         => 'Heure',
         'action'       => 'Action',
         'changes'      => 'Champs modifiés',
     ],
