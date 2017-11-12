@@ -4,6 +4,8 @@ Logger is a [Kirby CMS](https://getkirby.com) plugin that logs all changes to th
 
 If you don't want to or cannot use Git to track changes to the content folder but want keep an eye on who changed what and when, this plugin might be for you.
 
+**Note:** As of version 1.3.0, the date and time fields were combined. Old log files will therefore not be compatible with the new version.
+
 ![](logger.png)
 
 ## Installation
@@ -79,6 +81,12 @@ Default language for log entries; choose one of the currently four translations 
 ### logger.translation
 
 An array with custom translations. This will override the default translations set by the `logger.language` option.
+
+## Changelog
+
+### 1.3.0
+
+- Combined date/time field
 
 ## Credits
 

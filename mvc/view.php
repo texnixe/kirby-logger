@@ -12,7 +12,6 @@
           <thead>
             <td><?= translation('user') ?></td>
             <td><?= translation('date') ?></td>
-            <td><?= translation('time') ?></td>
             <td><?= translation('action') ?></td>
             <td><?= translation('changes') ?></td>
           </thead>
@@ -26,8 +25,7 @@
                   <td><?= isset($result[0])? trim($result[0]):'' ?></td>
                   <td><?= isset($result[1])? trim($result[1]):'' ?></td>
                   <td><?= isset($result[2])? trim($result[2]):'' ?></td>
-                  <td><?= isset($result[3])? trim($result[3]):'' ?></td>
-                  <td><?= isset($result[4])? str_replace('|', ", ", trim($result[4])):'' ?></td>
+                  <td><?= isset($result[3])? str_replace('|', ", ", trim($result[3])):'' ?></td>
                 </tr>
               <?php endforeach ?>
             <?php endif ?>

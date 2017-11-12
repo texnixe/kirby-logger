@@ -37,8 +37,7 @@ class Logger {
     $file = $this->logfile;
     $data = array(
       'user' => $this->getUser(),
-      'date' => date('Y-m-d'),
-      'time' => date('H:i:s'),
+      'date' => date('Y-m-d H:i:s'),
       'message' => $message,
       'changed' => !empty($diff)? implode('|', $diff): ''
     );
