@@ -84,6 +84,10 @@ An array with custom translations. This will override the default translations s
 
 ## Changelog
 
+### 1.3.1
+
+- Added pagination
+
 ### 1.3.0
 
 - Combined date/time field

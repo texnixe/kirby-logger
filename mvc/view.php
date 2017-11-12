@@ -38,20 +38,19 @@
 <?php endif ?>
 
 <script>
-	$('#logger').on('init page.dt processing.dt order.dt draw.dt', function () {
+  $('#logger').on('init page.dt processing.dt order.dt draw.dt', function () {
     $('table.dataTable tr.odd').css('background-color', 'white');
     $('table.dataTable tr.even').css('background-color', '#efefef');
-		$(".paginate_button").attr("href", "#");
-		$(".paginate_button").bind('click', function (e) {
-			e.preventDefault();
-		});
-	}).DataTable({
-    "iDisplayLength": <?= c::get('logger.entries', 50); ?>,
-		responsive: true,
-		autoWidth: false,
-    "bLengthChange": false,
+  }).DataTable({
+    "pageLength": <?= c::get('logger.entries', 50); ?>,
+    responsive: true,
+    "paging": true,
+    "pagingType": "simple_numbers",
+    "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+    autoWidth: false,
+    "lengthChange": true,
     "columnDefs": [
-    { "width": "40%", "targets": [3] }
+      { "width": "40%", "targets": [2] }
     ]
-	});
+  });
 </script>
