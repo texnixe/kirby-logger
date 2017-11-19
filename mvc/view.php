@@ -49,6 +49,7 @@
     "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
     autoWidth: false,
     "lengthChange": true,
+    "order": [ 1, 'desc' ],
     "columnDefs": [
       { "width": "40%", "targets": [2] }
     ]
