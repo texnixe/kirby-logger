@@ -8,6 +8,10 @@ If you don't want to or cannot use Git to track changes to the content folder bu
 
 ![](logger.png)
 
+## Requirements
+
+- PHP 5.6+
+
 ## Installation
 
 ### Download
