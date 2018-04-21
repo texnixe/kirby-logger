@@ -21,12 +21,14 @@ function logger() {
 require_once(__DIR__.DS.'lib'.DS.'hooks.php');
 require_once(__DIR__ . DS . 'lib' . DS . 'helpers.php');
 
-// Load widgets
-if(site()->user() && in_array(site()->user()->role(), c::get('logger.roles', ['admin']))) {
-  kirby()->set('widget', 'logger', __DIR__. DS . 'widgets' . DS . 'logger');
-}
-
+// call site()->user() only when in Panel to prevent cookie being set
 if(function_exists('panel') && $panel = panel()) {
+  
+  // Load widgets
+  if(site()->user() && in_array(site()->user()->role(), c::get('logger.roles', ['admin']))) {
+    kirby()->set('widget', 'logger', __DIR__. DS . 'widgets' . DS . 'logger');
+  }
+  
   $panel->routes = array_merge([
     [
       'pattern' => 'logger',
